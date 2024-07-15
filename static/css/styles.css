@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?t=st=1718258824~exp=1718262424~hmac=ed95bd1568d089da7c426fb3a0448e7cc51405de9ee05115d63cc29222d37cec&w=996'); /* Replace with your background image URL */
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: black;
+}
+form {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align: left;
+}
+label, select, textarea, input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+}
+label {
+    font-size: 1.2em;
+}
+select, textarea {
+    font-size: 1em;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.9);
+}
+input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #218838;
+}
+.translated-text {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    display: inline-block;
+    text-align: left;
+}
+a {
+    color: #28a745;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
