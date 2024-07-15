@@ -1,0 +1,1 @@
+Use the stored paragraph to perform translation when a different language is selected from the dropdown.
