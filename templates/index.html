@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <h1>Language Translator</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <label for="file">Upload Word or PDF File:</label>
+        <input type="file" name="file" id="file"><br>
+        <label>Or enter the paragraph here:</label>
+        <textarea name="paragraph" rows="10" cols="50">{{ paragraph }}</textarea><br>
+        <label for="language">Select Language:</label>
+        <select name="language" id="language">
+            {% for code, name in languages.items() %}
+                <option value="{{ code }}" {% if request.form.get('language') == code %}selected{% endif %}>{{ name }}</option>
+            {% endfor %}
+        </select><br>
+        <input type="submit" value="Translate">
+    </form>
+    {% if translated_text %}
+        <div class="translated-text">
+            <h2>Translated Paragraph:</h2>
+            <p>{{ translated_text }}</p>
+            <a href="{{ url_for('download_file', filename=translated_filename) }}">Download Translated File</a>
+        </div>
+    {% endif %}
+</body>
+</html>
